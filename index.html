@@ -1,30 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Viewer</title>
+    <title>copy baby</title>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden; /* Prevents double scrollbars */
+        /* Makes the PDF area nice and large */
+        body{
+            background: black;
+            color: white;
         }
         iframe {
             width: 100%;
-            height: 100vh;
-            border: none;
+            height: 80vh;
+            border: 1px solid #000;
+        }
+        .nav-links {
+            margin-bottom: 15px;
         }
     </style>
 </head>
 <body>
 
-    <iframe src="iot.pdf#toolbar=0" type="application/pdf">
-        <p>Your browser does not support IFrames. 
-           <a href="iot.pdf">Click here to view the PDF instead.</a>
-        </p>
-    </iframe>
+    <div class="nav-links">
+        <a href="iot.pdf" target="pdfDisplay">Open IOT PDF</a>
+        <a href="Teprac.pdf" target="pdfDisplay">Open CN PDF</a>
+
+    </div>
+
+    <iframe name="pdfDisplay" src="first-file.pdf"></iframe>
 
 </body>
 </html>
